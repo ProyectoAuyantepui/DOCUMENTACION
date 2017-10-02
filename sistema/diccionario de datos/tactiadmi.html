@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Diccionario de datos - TCatDoc</title>
+    <title>Diccionario de datos - TActiAdmi</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style type="text/css">
       body {  font-family: verdana, helvetica, sans-serif; margin: 0px; padding: 0; }
@@ -28,7 +28,7 @@
     </style>
   </head>
   <body>
-    <div id="ReportHeader"><h1>Diccionario de datos - TCatDoc</h1><b>Generated: </b>24/09/2017 02:41:11 a.m.<br /><b>Server: </b>PostgreSQL 9.5 (x86) (localhost:5432)<br /><b>Database: </b>horarios<br /><b>Schema: </b>public<br /></div>
+    <div id="ReportHeader"><h1>Diccionario de datos - TActiAdmi</h1><b>Generated: </b>02/10/2017 3:42:42<br /><b>Server: </b>PostgreSQL 9.5 (x86) (localhost:5432)<br /><b>Database: </b>horarios<br /><b>Schema: </b>public<br /></div>
     <div id="ReportDetails">
       <h2>Columns</h2>
       <div style="overflow:auto;">
@@ -42,15 +42,15 @@
             <th class="ReportTableHeaderCell" width="16,6666666666667%">Comment</th>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">codCatDoc</td>
+            <td class="ReportTableValueCell">codActAdm</td>
             <td class="ReportTableValueCell">integer</td>
             <td class="ReportTableValueCell">Yes</td>
             <td class="ReportTableValueCell">Yes</td>
-            <td class="ReportTableValueCell">nextval('"tcatdoc_codCatDoc_seq"'::regclass)</td>
+            <td class="ReportTableValueCell">nextval('"TActiAdmi_codActAdm_seq"'::regclass)</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsOddDataRow">
-            <td class="ReportTableValueCell">nombre</td>
+            <td class="ReportTableValueCell">titulo</td>
             <td class="ReportTableValueCell">character varying(60)</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell">No</td>
@@ -58,8 +58,24 @@
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">descripcion</td>
-            <td class="ReportTableValueCell">character varying(120)</td>
+            <td class="ReportTableValueCell">observaciones</td>
+            <td class="ReportTableValueCell">character varying(150)</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsOddDataRow">
+            <td class="ReportTableValueCell">dependencia</td>
+            <td class="ReportTableValueCell">character varying(300)</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsEvenDataRow">
+            <td class="ReportTableValueCell">tipActAdm</td>
+            <td class="ReportTableValueCell">integer</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell"> </td>
@@ -78,9 +94,9 @@
             <th class="ReportTableHeaderCell" width="25%">Comment</th>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">tcatdoc_pkey</td>
+            <td class="ReportTableValueCell">TActiAdmi_pkey</td>
             <td class="ReportTableValueCell">Primary key</td>
-            <td class="ReportTableValueCell">("codCatDoc")</td>
+            <td class="ReportTableValueCell">("codActAdm")</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
         </table>

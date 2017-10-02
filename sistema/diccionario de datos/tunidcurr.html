@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Diccionario de datos - TDocDep</title>
+    <title>Diccionario de datos - TUnidCurr</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style type="text/css">
       body {  font-family: verdana, helvetica, sans-serif; margin: 0px; padding: 0; }
@@ -28,7 +28,7 @@
     </style>
   </head>
   <body>
-    <div id="ReportHeader"><h1>Diccionario de datos - TDocDep</h1><b>Generated: </b>24/09/2017 02:46:26 a.m.<br /><b>Server: </b>PostgreSQL 9.5 (x86) (localhost:5432)<br /><b>Database: </b>horarios<br /><b>Schema: </b>public<br /></div>
+    <div id="ReportHeader"><h1>Diccionario de datos - TUnidCurr</h1><b>Generated: </b>02/10/2017 3:50:50<br /><b>Server: </b>PostgreSQL 9.5 (x86) (localhost:5432)<br /><b>Database: </b>horarios<br /><b>Schema: </b>public<br /></div>
     <div id="ReportDetails">
       <h2>Columns</h2>
       <div style="overflow:auto;">
@@ -42,24 +42,80 @@
             <th class="ReportTableHeaderCell" width="16,6666666666667%">Comment</th>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">cedDocDep</td>
+            <td class="ReportTableValueCell">codUniCur</td>
             <td class="ReportTableValueCell">integer</td>
             <td class="ReportTableValueCell">Yes</td>
             <td class="ReportTableValueCell">Yes</td>
-            <td class="ReportTableValueCell">nextval('"tdocdep_cedDocDep_seq"'::regclass)</td>
+            <td class="ReportTableValueCell">nextval('"TUnidCurr_codUniCur_seq"'::regclass)</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsOddDataRow">
-            <td class="ReportTableValueCell">cedDoc</td>
-            <td class="ReportTableValueCell">character varying(8)</td>
+            <td class="ReportTableValueCell">codPnf</td>
+            <td class="ReportTableValueCell">integer</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell"> </td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">codDep</td>
+            <td class="ReportTableValueCell">codEje</td>
             <td class="ReportTableValueCell">integer</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsOddDataRow">
+            <td class="ReportTableValueCell">nombre</td>
+            <td class="ReportTableValueCell">character varying(60)</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsEvenDataRow">
+            <td class="ReportTableValueCell">alias</td>
+            <td class="ReportTableValueCell">character varying(10)</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsOddDataRow">
+            <td class="ReportTableValueCell">uniCre</td>
+            <td class="ReportTableValueCell">integer</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsEvenDataRow">
+            <td class="ReportTableValueCell">fase</td>
+            <td class="ReportTableValueCell">integer</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsOddDataRow">
+            <td class="ReportTableValueCell">htas</td>
+            <td class="ReportTableValueCell">integer</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsEvenDataRow">
+            <td class="ReportTableValueCell">htis</td>
+            <td class="ReportTableValueCell">integer</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell">No</td>
+            <td class="ReportTableValueCell"> </td>
+            <td class="ReportTableValueCell"> </td>
+          </tr>
+          <tr class="ReportDetailsOddDataRow">
+            <td class="ReportTableValueCell">observaciones</td>
+            <td class="ReportTableValueCell">character varying(150)</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell"> </td>
@@ -78,21 +134,21 @@
             <th class="ReportTableHeaderCell" width="25%">Comment</th>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">tdocdep_pkey</td>
+            <td class="ReportTableValueCell">TUnidCurr_pkey</td>
             <td class="ReportTableValueCell">Primary key</td>
-            <td class="ReportTableValueCell">("cedDocDep")</td>
+            <td class="ReportTableValueCell">("codUniCur")</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsOddDataRow">
-            <td class="ReportTableValueCell">fk_ceddoc_tdocente</td>
+            <td class="ReportTableValueCell">fk_codEje_TEjes</td>
             <td class="ReportTableValueCell">Foreign key</td>
-            <td class="ReportTableValueCell">("cedDoc")       REFERENCES public.tdocente ("cedDoc") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
+            <td class="ReportTableValueCell">("codEje")       REFERENCES public."TEjes" ("codEje") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">fk_coddep_tdependencia</td>
+            <td class="ReportTableValueCell">fk_codPnf_TPnf</td>
             <td class="ReportTableValueCell">Foreign key</td>
-            <td class="ReportTableValueCell">("codDep")       REFERENCES public.tdependencia ("codDep") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
+            <td class="ReportTableValueCell">("codPnf")       REFERENCES public."TPnf" ("codPnf") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
         </table>

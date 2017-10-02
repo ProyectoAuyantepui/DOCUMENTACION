@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Diccionario de datos - TDocente</title>
+    <title>Diccionario de datos - TDocentes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style type="text/css">
       body {  font-family: verdana, helvetica, sans-serif; margin: 0px; padding: 0; }
@@ -28,7 +28,7 @@
     </style>
   </head>
   <body>
-    <div id="ReportHeader"><h1>Diccionario de datos - TDocente</h1><b>Generated: </b>24/09/2017 02:47:08 a.m.<br /><b>Server: </b>PostgreSQL 9.5 (x86) (localhost:5432)<br /><b>Database: </b>horarios<br /><b>Schema: </b>public<br /></div>
+    <div id="ReportHeader"><h1>Diccionario de datos - TDocentes</h1><b>Generated: </b>02/10/2017 3:47:16<br /><b>Server: </b>PostgreSQL 9.5 (x86) (localhost:5432)<br /><b>Database: </b>horarios<br /><b>Schema: </b>public<br /></div>
     <div id="ReportDetails">
       <h2>Columns</h2>
       <div style="overflow:auto;">
@@ -122,7 +122,7 @@
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">fecIng</td>
+            <td class="ReportTableValueCell">fecha_ingreso</td>
             <td class="ReportTableValueCell">date</td>
             <td class="ReportTableValueCell">No</td>
             <td class="ReportTableValueCell">No</td>
@@ -222,25 +222,25 @@
             <th class="ReportTableHeaderCell" width="25%">Comment</th>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">tdocente_pkey</td>
+            <td class="ReportTableValueCell">TDocentes_pkey</td>
             <td class="ReportTableValueCell">Primary key</td>
             <td class="ReportTableValueCell">("cedDoc")</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsOddDataRow">
-            <td class="ReportTableValueCell">fk_codcatdoc_tcatdoc</td>
+            <td class="ReportTableValueCell">fk_codCatDoc_TCatDoc</td>
             <td class="ReportTableValueCell">Foreign key</td>
-            <td class="ReportTableValueCell">("codCatDoc")       REFERENCES public.tcatdoc ("codCatDoc") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
+            <td class="ReportTableValueCell">("codCatDoc")       REFERENCES public."TCatDoc" ("codCatDoc") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsEvenDataRow">
-            <td class="ReportTableValueCell">fk_codrol_trol</td>
+            <td class="ReportTableValueCell">fk_codRol_TRoles</td>
             <td class="ReportTableValueCell">Foreign key</td>
-            <td class="ReportTableValueCell">("codRol")       REFERENCES public.trol ("codRol") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
+            <td class="ReportTableValueCell">("codRol")       REFERENCES public."TRoles" ("codRol") MATCH SIMPLE       ON UPDATE NO ACTION ON DELETE NO ACTION</td>
             <td class="ReportTableValueCell"> </td>
           </tr>
           <tr class="ReportDetailsOddDataRow">
-            <td class="ReportTableValueCell">tdocente_clave_key</td>
+            <td class="ReportTableValueCell">TDocentes_clave_key</td>
             <td class="ReportTableValueCell">Unique</td>
             <td class="ReportTableValueCell">(clave)</td>
             <td class="ReportTableValueCell"> </td>
