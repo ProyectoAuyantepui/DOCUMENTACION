@@ -4,9 +4,9 @@
 --drop database horarios;
 --create database horarios;
 --
---Estructura para la tabla(03) TDocente : Almacena informacion acerca de docentes de la uptaeb
+--Estructura para la tabla(03) "TDocentes" : Almacena informacion acerca de docentes de la uptaeb
 --
-create table TDocente(
+create table "TDocentes"(
 "cedDoc" varchar(8),
 "codCatDoc" int,
 "codRol" int,
@@ -17,7 +17,7 @@ create table TDocente(
 "telefono" varchar(12),
 "correo" varchar(40),
 "direccion" varchar(120),
-"fecIng" date,
+"fecha_ingreso" date, -- Fecha de ingreso a la univ
 "fecCon" date,
 "dedicacion" varchar(60),
 "condicion" varchar(60),
@@ -31,35 +31,35 @@ create table TDocente(
 primary key("cedDoc")
 );
 --
---Estructura para la tabla(06) TRol : Almacena informacion de los roles del sistema 
+--Estructura para la tabla(06) "TRoles" : Almacena informacion de los roles del sistema 
 --
-create table TRol(
+create table "TRoles"(
 "codRol" serial,
 "nombre" varchar(50),
 "observaciones" varchar(150),
 primary key("codRol")
 );
 --
---Estructura para la tabla(07) TModulo : Almacena informacion acerca de los modulos , actividades u Operaciones del sistema a los que el rol despues podra acceder
+--Estructura para la tabla(07) "TModulos" : Almacena informacion acerca de los modulos , actividades u Operaciones del sistema a los que el rol despues podra acceder
 --
-create table TModulo(
+create table "TModulos"(
 "codMod" serial,
 "nombre" varchar(90),
 primary key("codMod")
 );
 --
---Estructura para la tabla(08) TPermisologia : Tabla detalles entre las tablas TRol y TModulo
+--Estructura para la tabla(08) "TPermisologia" : Tabla detalles entre las tablas "TRoles" y "TModulos"
 --
-create table TPermisologia(
+create table "TPermisologia"(
 "codPer" serial,
 "codRol" int,
 "codMod" int,
 primary key("codPer")
 );
 --
---Estructura para la tabla(01) TComisiones : Almacena informacion acerca de comisiones de un docente
+--Estructura para la tabla(01) "TComisiones" : Almacena informacion acerca de comisiones de un docente
 --
-create table TComisiones(
+create table "TComisiones"(
 "codCom" serial,
 "cedDoc" varchar(8),
 "nombre" varchar(60),
@@ -68,18 +68,18 @@ create table TComisiones(
 primary key("codCom")
 );
 --
---Estructura para la tabla(02) TCatDoc : Almacena informacion acerca de categorias de docentes
+--Estructura para la tabla(02) "TCatDoc" : Almacena informacion acerca de categorias de docentes
 --
-create table TCatDoc(
+create table "TCatDoc"(
 "codCatDoc" serial,
 "nombre" varchar(60),
 "descripcion" varchar(120),
 primary key("codCatDoc")
 );
 --
---Estructura para la tabla(04) TDependencia : Almacena informacion acerca de dependencias a las que esta adscrito un docente o cualquier empleado en la uptaeb
+--Estructura para la tabla(04) "TDependencias" : Almacena informacion acerca de dependencias a las que esta adscrito un docente o cualquier empleado en la uptaeb
 --
-create table TDependencia(
+create table "TDependencias"(
 "codDep" serial,
 "nombre" varchar(50),
 "fecIng "date,
@@ -87,36 +87,36 @@ create table TDependencia(
 primary key("codDep")
 );
 --
---Estructura para la tabla(05) TDocDep : Tabla detalles entre las tablas TDocente y Tdependendencia
+--Estructura para la tabla(05) "TDocDep" : Tabla detalles entre las tablas "TDocentes" y Tdependendencia
 --
-create table TDocDep(
+create table "TDocDep"(
 "cedDocDep" serial,
 "cedDoc" varchar(8),
 "codDep" int,
 primary key("cedDocDep")
 );
 --
---Estructura para la tabla(09) TPnf : Almacena la informacion sobre los PNF o carreras de la uptaeb y esta estrictamente relacionado con las unidades curriculares o materias osea con el pensum 
+--Estructura para la tabla(09) "TPnf" : Almacena la informacion sobre los PNF o carreras de la uptaeb y esta estrictamente relacionado con las unidades curriculares o materias osea con el pensum 
 --
-create table TPnf(
+create table "TPnf"(
 "codPnf" serial,
 "alias" varchar(6),
 "descripcion" varchar(150),
 primary key("codPnf")
 );
 --
---Estructura para la tabla(10) TEje : Almacena informacion acerca de los ejes a los que pertenecen las unidades curriculares por ejemplo eje epistemologico
+--Estructura para la tabla(10) "TEjes" : Almacena informacion acerca de los ejes a los que pertenecen las unidades curriculares por ejemplo eje epistemologico
 --
-create table TEje(
+create table "TEjes"(
 "codEje" serial,
 "nombre" varchar(60),
 "descripcion" varchar(150),
 primary key("codEje")
 );
 --
---Estructura para la tabla(11) TUnidCurr : Almacena informacion acerca de Unidades curriculares o las materias y esta relacionada con horarios , eje, y pnf
+--Estructura para la tabla(11) "TUnidCurr" : Almacena informacion acerca de Unidades curriculares o las materias y esta relacionada con horarios , eje, y pnf
 --
-create table TUnidCurr(
+create table "TUnidCurr"(
 "codUniCur" serial,
 "codPnf" int,
 "codEje" int,
@@ -130,9 +130,9 @@ create table TUnidCurr(
 primary key("codUniCur")
 );
 --
---Estructura para la tabla(12) TAmbiente : Guarda la informacion acerca de los ambientes o aulas de clase 
+--Estructura para la tabla(12) "TAmbientes" : Guarda la informacion acerca de los ambientes o aulas de clase 
 --
-create table TAmbiente(
+create table "TAmbientes"(
 "codAmb" varchar(4),
 "ubicacion" varchar(60),
 "tipo" int,
@@ -141,9 +141,9 @@ create table TAmbiente(
 primary key("codAmb")
 );
 --
---Estructura para la tabla(13) TSeccion : Almacena informacion acerca de las secciones de los estudiantes de cada pnf 
+--Estructura para la tabla(13) "TSecciones" : Almacena informacion acerca de las secciones de los estudiantes de cada pnf 
 --
-create table TSeccion(
+create table "TSecciones"(
 "codSec" varchar(6),
 "trayecto" int,
 "matricula" int,
@@ -154,51 +154,51 @@ create table TSeccion(
 primary key("codSec")
 );
 --
---Estructura para la tabla(14) TActiComp : Almacena informacion acerca de Otras Actividades Academicas del docente que tambien son tomadas en cuenta para su horario pero no como horas de clase
+--Estructura para la tabla(14) "TActiAdmi" : Almacena informacion acerca de Otras Actividades Administrativas del docente que tambien son tomadas en cuenta para su horario pero no como horas de clase
 --
-create table TActiComp(
-"codActCom" serial,
+create table "TActiAdmi"(
+"codActAdm" serial,
 "titulo" varchar(60),
 "observaciones" varchar(150),
 "dependencia" varchar(300),
-"tipActCom" int,
-primary key("codActCom")
+"tipActAdm" int,
+primary key("codActAdm")
 );
 --
---Estructura para la tabla(15) TDia : Almacena informacion acerca de los dias de la semana 
+--Estructura para la tabla(15) "TDias" : Almacena informacion acerca de los dias de la semana 
 --
-create table TDia(
+create table "TDias"(
 "codDia" serial,
 "nombre" varchar(10),
 primary key("codDia")
 );
 --
---Estructura para la tabla(16) THora : Almacena informacion acerca de las horas de inicio y de salida de cada actividad
+--Estructura para la tabla(16) "THoras" : Almacena informacion acerca de las horas de inicio y de salida de cada actividad
 --
-create table THora(
+create table "THoras"(
 "codHor" serial,
 "horEnt" time,
 "horSal" time,
 primary key("codHor")
 );
 --
---Estructura para la tabla(17) TTiempo : Tabla Puente entre las tablas TDia y THora y esta relacionada tambien con horario
+--Estructura para la tabla(17) "TTiempo" : Tabla Puente entre las tablas "TDias" y "THoras" y esta relacionada tambien con horario
 --
-create table TTiempo(
+create table "TTiempo"(
 "codTie" serial,
 "codDia" int,
 "codHor" int,
 primary key("codTie")
 );
 --
---Estructura para la tabla(18) THorario : Tabla principal que generara los horarios de secciones , docentes , aulas y unidades curriculares ademas de otros reportes y consultas
+--Estructura para la tabla(18) "THorarios" : Tabla principal que generara los horarios de secciones , docentes , aulas y unidades curriculares ademas de otros reportes y consultas
 --
-create table THorario(
+create table "THorarios"(
 "codHor" serial,
 "cedDoc" varchar(8),
 "codSec" varchar(6),
 "codUniCur" int,
-"codActCom" int,
+"codActAdm" int,
 "codTie" int,
 "codAmb" varchar(4),
 "lapso" varchar(12),
@@ -208,107 +208,107 @@ primary key("codHor")
 );
 
 --- 
--- CLAVES FORANEAS DE LAS TABLAS : TComisiones,TDocente,TDocDep,TPermisologia,TTiempo,THorario,TUnidCurr
+-- CLAVES FORANEAS DE LAS TABLAS : "TComisiones","TDocentes","TDocDep","TPermisologia","TTiempo","THorarios","TUnidCurr"
 ---
 
 --
--- Claves foraneas para la tabla (01) "TComisiones"
+-- Claves foraneas para la tabla (01) ""TComisiones""
 --
-alter table TComisiones 
-add constraint fk_cedDoc_TDocente
+alter table "TComisiones" 
+add constraint "fk_cedDoc_TDocentes"
 foreign key("cedDoc") 
-references TDocente("cedDoc");
+references "TDocentes"("cedDoc");
 --
--- Claves foraneas para la tabla (03) "TDocente"
+-- Claves foraneas para la tabla (03) ""TDocentes""
 --
-alter table TDocente
-add constraint fk_codCatDoc_TCatDoc
+alter table "TDocentes"
+add constraint "fk_codCatDoc_TCatDoc"
 foreign key("codCatDoc") 
-references TCatDoc("codCatDoc");
+references "TCatDoc"("codCatDoc");
 
-alter table TDocente
-add constraint fk_codRol_TRol
+alter table "TDocentes"
+add constraint "fk_codRol_TRoles"
 foreign key("codRol") 
-references TRol("codRol");
+references "TRoles"("codRol");
 --
--- Claves foraneas para la tabla (05) "TDocDep"
+-- Claves foraneas para la tabla (05) ""TDocDep""
 --
-alter table TDocDep
-add constraint fk_cedDoc_TDocente
+alter table "TDocDep"
+add constraint "fk_cedDoc_TDocentes"
 foreign key("cedDoc") 
-references TDocente("cedDoc");
+references "TDocentes"("cedDoc");
 
-alter table TDocDep
-add constraint fk_codDep_TDependencia
+alter table "TDocDep"
+add constraint "fk_codDep_TDependencias"
 foreign key("codDep") 
-references TDependencia("codDep");
+references "TDependencias"("codDep");
 --
--- Claves foraneas para la tabla (08) "TPermisologia"
+-- Claves foraneas para la tabla (08) ""TPermisologia""
 --
-alter table TPermisologia
-add constraint fk_codRol_TRol
+alter table "TPermisologia"
+add constraint "fk_codRol_TRoles"
 foreign key("codRol") 
-references TRol("codRol");
+references "TRoles"("codRol");
 
-alter table TPermisologia
-add constraint fk_codMod_TModulo
+alter table "TPermisologia"
+add constraint "fk_codMod_TModulos"
 foreign key("codMod") 
-references TModulo("codMod");
+references "TModulos"("codMod");
 --
--- Claves foraneas para la tabla (11) "TTiempo"
+-- Claves foraneas para la tabla (11) ""TTiempo""
 --
-alter table TTiempo
-add constraint fk_codDia_TDia
+alter table "TTiempo"
+add constraint "fk_codDia_TDias"
 foreign key("codDia") 
-references TDia("codDia");
+references "TDias"("codDia");
 
-alter table TTiempo
-add constraint fk_codHor_THora
+alter table "TTiempo"
+add constraint "fk_codHor_THoras"
 foreign key("codHor") 
-references THora("codHor");
+references "THoras"("codHor");
 --
--- Claves foraneas para la tabla (17) "THorario"
+-- Claves foraneas para la tabla (17) ""THorarios""
 --
-alter table THorario
-add constraint fk_cedDoc_TDocente
+alter table "THorarios"
+add constraint "fk_cedDoc_TDocentes"
 foreign key("cedDoc") 
-references TDocente("cedDoc");
+references "TDocentes"("cedDoc");
 
-alter table THorario
-add constraint fk_codSec_TSeccion
+alter table "THorarios"
+add constraint "fk_codSec_TSecciones"
 foreign key("codSec") 
-references TSeccion("codSec");
+references "TSecciones"("codSec");
 
-alter table THorario
-add constraint fk_codUniCur_TUnidCurr
+alter table "THorarios"
+add constraint "fk_codUniCur_TUnidCurr"
 foreign key("codUniCur") 
-references TUnidCurr("codUniCur");
+references "TUnidCurr"("codUniCur");
 
-alter table THorario
-add constraint fk_codActCom_TActiComp
-foreign key("codActCom") 
-references TActiComp("codActCom");
+alter table "THorarios"
+add constraint "fk_codActAdm_TActiAdmi"
+foreign key("codActAdm") 
+references "TActiAdmi"("codActAdm");
 
-alter table THorario
-add constraint fk_codTie_TTiempo
+alter table "THorarios"
+add constraint "fk_codTie_TTiempo"
 foreign key("codTie") 
-references TTiempo("codTie");
+references "TTiempo"("codTie");
 
-alter table THorario
-add constraint fk_codAmb_TAmbiente
+alter table "THorarios"
+add constraint "fk_codAmb_TAmbientes"
 foreign key("codAmb") 
-references TAmbiente("codAmb");
+references "TAmbientes"("codAmb");
 --
--- Claves foraneas para la tabla (18) "TUnidCurr"
+-- Claves foraneas para la tabla (18) ""TUnidCurr""
 --
-alter table TUnidCurr
-add constraint fk_codPnf_TPnf
+alter table "TUnidCurr"
+add constraint "fk_codPnf_TPnf"
 foreign key("codPnf") 
-references TPnf("codPnf");
+references "TPnf"("codPnf");
 
-alter table TUnidCurr
-add constraint fk_codEje_TEje
+alter table "TUnidCurr"
+add constraint "fk_codEje_TEjes"
 foreign key("codEje") 
-references TEje("codEje");
+references "TEjes"("codEje");
 ---
 --
